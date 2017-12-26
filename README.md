@@ -23,3 +23,8 @@ aws s3 cp output-ext4/centos7-ec2-ext4.ova s3://my-ami-bucket/centos7-ec2-ext4.o
 ```
 aws ec2 import-image --cli-input-json '{  "Description": "CentOS 7 EXT4", "DiskContainers": [ { "Description": "CentOS 7 EXT4", "UserBucket": { "S3Bucket": "my-ami-bucket", "S3Key" : "centos7-ec2-ext4.ova" } } ]}'
 ```
+## Check import state
+```
+aws ec2 describe-import-image-tasks
+```
+
